@@ -1,11 +1,12 @@
-## TDS Network Tracer
-# This class logs all TDS traffic to both the console and disk.
+## TDS Network Tracer (Developer Tool)
+
+This class logs all TDS traffic to both the console and disk.
 
 ## Usage
 
 To use the tracer, follow these steps:
 
-1. Add the `NetworkTracer.cs` file to your branch of the https://github.com/dotnet/SqlClient) project.
+1. Add the `NetworkTracer.cs` file to your  https://github.com/dotnet/SqlClient branch
    
 2. Replace the `SetPacketData` and `SNIPacketGetData` methods located at:
    `src\Microsoft.Data.SqlClient\netcore\src\Microsoft\Data\SqlClient\TdsParserStateObjectNative.cs`
@@ -33,6 +34,8 @@ protected override uint SNIPacketGetData(PacketHandle packet, byte[] _inBuff, re
 ```
 
 3. After making these changes, when you run the console application, you will be able to view the packet details in the console, and a file will also be created in the `bin` folder for the session.
+
+Note: It has support for both Normal  and Mars connections. However this can only work a single connection.
 
 # Future Enhancements
 I might develop a Windows app to deserialize each request and response for easier readability. In the meantime, I recommend leveraging ChatGPT for interpreting payloads, as it provides a good translation of each packet.
