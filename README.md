@@ -35,9 +35,10 @@ protected override uint SNIPacketGetData(PacketHandle packet, byte[] _inBuff, re
 
 3. After making these changes, when you run the console application, you will be able to view the packet details in the console, and a file will also be created in the `bin` folder for the session.
 
-Note: It has support for both Normal  and Mars connections. However this can only work a single connection.
+Tacer can  support  both Normal and Mars packets.
+Note: It wont work if you have more than one connection which are used in parallel.
 
-# Future Enhancements
+Future Enhancements
 I might develop a Windows app to deserialize each request and response for easier readability. In the meantime, I recommend leveraging ChatGPT for interpreting payloads, as it provides a good translation of each packet.
 
 You can also use this specialized ChatGPT for TDS-specific queries:  
