@@ -1,0 +1,6 @@
+[package]
+name = "my_network_tracer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
